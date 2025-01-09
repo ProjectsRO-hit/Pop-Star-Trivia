@@ -1,4 +1,4 @@
-# from turtle import Turtle, Screen
+from turtle import Turtle, Screen
 import pandas as pd
 from trivia_brain import TriviaBrain
 

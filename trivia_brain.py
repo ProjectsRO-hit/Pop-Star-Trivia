@@ -8,6 +8,7 @@ class TriviaBrain:
         self.image = ["./trivia/1.gif", "./trivia/2.gif", "./trivia/3.gif", "./trivia/4.gif", "./trivia/5.gif"]
         self.turtle = Turtle()
         self.turtle.hideturtle()
+        self.questions_count = 0
     
     def welcome(self):
         self.screen.addshape(self.image[0])
@@ -31,4 +32,8 @@ class TriviaBrain:
         else:
             self.screen.bye()
             exit()
-
+    
+    def trivia(self):
+        self.screen.addshape(self.image[2])
+        self.turtle.shape(self.image[2])
+        self.turtle.showturtle()  # Ensure showturtle() is called properly
