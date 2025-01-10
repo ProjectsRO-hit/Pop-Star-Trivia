@@ -31,7 +31,7 @@ def n2():
 
 # Create one screen for the game
 screen1 = turtle.Screen()
-screen1.setup(width=600, height=500)    
+screen1.setup(width=1.0, height=1.0)    
 screen1.title("Trivia Game")
 screen1.tracer(0)
 # Load shapes
@@ -57,7 +57,7 @@ def button_click(x, y):
     n2()
 
 # Register click event on the entire screen to trigger n2
-screen1.onscreenclick(button_click)
+t2.onclick(button_click)
 
 # Keep the window open
 screen1.mainloop()
