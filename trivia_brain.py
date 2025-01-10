@@ -1,4 +1,5 @@
 from turtle import Turtle, Screen
+import pandas as pd
 
 class TriviaBrain:
     def __init__(self):
@@ -13,7 +14,7 @@ class TriviaBrain:
     def welcome(self):
         self.screen.addshape(self.image[0])
         self.turtle.shape(self.image[0])
-        self.turtle.showturtle()  # Call showturtle() with parentheses to make sure it works
+        self.turtle.showturtle()  
         self.continue_game = self.screen.textinput("Welcome to Trivia Game", "Do you want to play the game? Type 'yes' to continue else 'no' to exit")
         if self.continue_game.lower() == "yes":
             self.turtle.hideturtle()

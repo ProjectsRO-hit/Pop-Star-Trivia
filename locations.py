@@ -1,4 +1,4 @@
-# from turtle import Turtle, Screen  
+from turtle import Turtle, Screen  
 
 # screen = Screen()
 # screen.setup(width=600, height=500)
@@ -22,28 +22,57 @@
 
 # screen.mainloop()
 
-from turtle import Screen, Turtle
+# import turtle
 
-CURSOR_SIZE = 20
-FONT_SIZE = 12
-FONT = ('Arial', FONT_SIZE, 'bold')
+# # Setup the turtle screen
+# screen = turtle.Screen()
+# screen.title("Interactive Button with GIF")
+# screen.setup(width=400, height=400)
 
-def draw_onclick(x, y):
-    turtle.dot(100, 'cyan')
+# # Load the GIF image
+# gif_file = "button.gif"  # Ensure this file is in your working directory or provide full path
+# screen.addshape(gif_file)
 
-button = Turtle()
-button.hideturtle()
-button.shape('circle')
-button.fillcolor('red')
-button.penup()
-button.goto(150, 150)
-button.write("Click me!", align='center', font=FONT)
-button.sety(150 + CURSOR_SIZE + FONT_SIZE)
-button.onclick(draw_onclick)
-button.showturtle()
+# # Create a turtle for the button
+# button = turtle.Turtle()
+# button.shape(gif_file)
+# button.penup()
+# button.goto(0, 0)  # Position the button at the center of the screen
 
-turtle = Turtle()
-turtle.hideturtle()
+# # Button state
+# button_state = 'up'
 
-screen = Screen()
-screen.mainloop()
+# def change_button_state(x, y):
+#     global button_state
+#     # Check if click is on button
+#     if button.distance(x, y) < 50:  # Assuming button size; adjust if needed
+#         if button_state == 'up':
+#             button_state = 'down'
+#             # Here, you'd typically change the GIF if you have one for pressed state
+#             # For simplicity, we'll just rotate the button slightly to show interaction
+#             button.right(5)
+#         else:
+#             button_state = 'up'
+#             button.left(5)
+
+# # Bind click event to the screen
+# screen.onclick(change_button_state)
+
+# # Keep the window open
+# screen.mainloop()
+
+screen1 = Screen()
+screen1.setup(width=600, height=500)    
+screen1.title("Trivia Game")
+screen1.addshape("./trivia/1.gif")
+t1 = Turtle()
+t1.shape("./trivia/1.gif")
+t1.penup()
+screen2 = Screen()
+screen2.addshape("button.gif")
+t2 = Turtle()
+t2.shape("button.gif")
+t2.penup()
+
+
+screen1.mainloop()
