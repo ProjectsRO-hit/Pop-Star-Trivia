@@ -61,6 +61,12 @@ from turtle import Turtle, Screen
 # # Keep the window open
 # screen.mainloop()
 
+def screen_input(x, y):
+    print(x, y)
+
+
+
+
 screen1 = Screen()
 screen1.setup(width=600, height=500)    
 screen1.title("Trivia Game")
@@ -68,11 +74,13 @@ screen1.addshape("./trivia/1.gif")
 t1 = Turtle()
 t1.shape("./trivia/1.gif")
 t1.penup()
+t1.onclick(screen_input)
 screen2 = Screen()
 screen2.addshape("button.gif")
 t2 = Turtle()
 t2.shape("button.gif")
 t2.penup()
+t2.goto(-.0, -71.0)   
 
 
 screen1.mainloop()
