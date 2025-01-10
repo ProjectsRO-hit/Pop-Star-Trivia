@@ -1,4 +1,4 @@
-from turtle import Turtle, Screen  
+# from turtle import Turtle, Screen  
 
 # screen = Screen()
 # screen.setup(width=600, height=500)
@@ -20,60 +20,44 @@ from turtle import Turtle, Screen
 # t.write(">Hello World\n>Colour pops\n>Sugar Candies", font=("Jua", 16, "normal"))
 
 
-# screen.mainloop()
+import turtle
 
-# import turtle
+def n2():
+    t2.hideturtle()
+    screen1.addshape("./trivia/2.gif")
+    t1.shape("./trivia/2.gif")
+    t1.showturtle()
+    screen1.update()
 
-# # Setup the turtle screen
-# screen = turtle.Screen()
-# screen.title("Interactive Button with GIF")
-# screen.setup(width=400, height=400)
-
-# # Load the GIF image
-# gif_file = "button.gif"  # Ensure this file is in your working directory or provide full path
-# screen.addshape(gif_file)
-
-# # Create a turtle for the button
-# button = turtle.Turtle()
-# button.shape(gif_file)
-# button.penup()
-# button.goto(0, 0)  # Position the button at the center of the screen
-
-# # Button state
-# button_state = 'up'
-
-# def change_button_state(x, y):
-#     global button_state
-#     # Check if click is on button
-#     if button.distance(x, y) < 50:  # Assuming button size; adjust if needed
-#         if button_state == 'up':
-#             button_state = 'down'
-#             # Here, you'd typically change the GIF if you have one for pressed state
-#             # For simplicity, we'll just rotate the button slightly to show interaction
-#             button.right(5)
-#         else:
-#             button_state = 'up'
-#             button.left(5)
-
-# # Bind click event to the screen
-# screen.onclick(change_button_state)
-
-# # Keep the window open
-# screen.mainloop()
-
-screen1 = Screen()
+# Create one screen for the game
+screen1 = turtle.Screen()
 screen1.setup(width=600, height=500)    
 screen1.title("Trivia Game")
+screen1.tracer(0)
+# Load shapes
 screen1.addshape("./trivia/1.gif")
-t1 = Turtle()
+screen1.addshape("button.gif")
+
+# Create turtles
+t1 = turtle.Turtle()
 t1.shape("./trivia/1.gif")
 t1.penup()
-screen2 = Screen()
-screen2.addshape("button.gif")
-t2 = Turtle()
+
+
+t2 = turtle.Turtle()
 t2.shape("button.gif")
 t2.penup()
-t2.goto(-7, -72.0)   
+t2.goto(-7, -72.0)
+screen1.update()
 
+# Function to handle button click
+def button_click(x, y):
+    print("Button clicked!")
+    # Call n2 function when clicking anywhere on the screen
+    n2()
 
+# Register click event on the entire screen to trigger n2
+screen1.onscreenclick(button_click)
+
+# Keep the window open
 screen1.mainloop()
