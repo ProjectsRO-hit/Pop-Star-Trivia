@@ -24,8 +24,8 @@ import turtle
 
 def n2():
     t2.hideturtle()
-    screen1.addshape("./trivia/2.gif")
-    t1.shape("./trivia/2.gif")
+    screen1.addshape("./trivias/3.gif")
+    t1.shape("./trivias/3.gif")
     t1.showturtle()
     screen1.update()
 
@@ -35,12 +35,12 @@ screen1.setup(width=1.0, height=1.0)
 screen1.title("Trivia Game")
 screen1.tracer(0)
 # Load shapes
-screen1.addshape("./trivia/1.gif")
+screen1.addshape("./trivias/1.gif")
 screen1.addshape("button.gif")
 
 # Create turtles
 t1 = turtle.Turtle()
-t1.shape("./trivia/1.gif")
+t1.shape("./trivias/1.gif")
 t1.penup()
 
 
