@@ -24,6 +24,10 @@ class TriviaBrain:
         self.t2.penup()
         self.t2.goto(-7, -122.0)
 
+        self.t3 = Turtle() #third turtle for writing
+        self.t3.hideturtle()
+        self.t3.penup()
+
         self.main_screen.update()
 
 
@@ -33,9 +37,9 @@ class TriviaBrain:
         self.t2.goto(400, -178)
         self.main_screen.update()
 
-    def trivia(self):
-        pass
-
+    def trivia_game(self):
+        self.main_screen.addshape("./trivias/3.gif")
+        self.t1.shape("./trivias/3.gif")
         
 
         

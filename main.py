@@ -8,6 +8,7 @@ def click_instruction(x, y): #setting button function
 
 def click_trivia(x, y):
     print("Clicked on Trivia")
+    trivia.trivia_game()
 
 #setting object for screen
 trivia = TriviaBrain()
@@ -16,6 +17,7 @@ trivia.welcome() #calling welcome screen function
 
 trivia.t2.onclick(click_instruction) #registering button function
 
+# trivia.t2.onclick(click_trivia)
 
 #setting up pandas
 
