@@ -47,7 +47,7 @@ t1.penup()
 t2 = turtle.Turtle()
 t2.shape("button.gif")
 t2.penup()
-t2.goto(-7, -122.0)
+
 screen1.update()
 
 # Function to handle button click
