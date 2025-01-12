@@ -19,10 +19,16 @@ class TriviaBrain:
         self.t1.shape("./trivias/1.gif")
         self.t1.penup()
 
-        self.t2 = Turtle() #second for button object
+        self.t2 = Turtle() #first page for button object
         self.t2.shape("button.gif")
         self.t2.penup()
         self.t2.goto(-7, -122.0)
+
+        self.t4 = Turtle() #second page for button object
+        self.t4.hideturtle()
+        self.t4.shape("button.gif")
+        self.t4.hideturtle()
+        self.t4.penup()
 
         self.t3 = Turtle() #third turtle for writing
         self.t3.hideturtle()
@@ -34,12 +40,16 @@ class TriviaBrain:
     def instructions(self):
         self.main_screen.addshape("./trivias/2.gif")
         self.t1.shape("./trivias/2.gif")
-        self.t2.goto(400, -178)
+        self.t2.hideturtle()
+        self.t4.showturtle()
+        self.t4.goto(400, -178)
         self.main_screen.update()
 
     def trivia_game(self):
         self.main_screen.addshape("./trivias/3.gif")
         self.t1.shape("./trivias/3.gif")
+        self.t4.hideturtle()
+        self.main_screen.update()
         
 
         

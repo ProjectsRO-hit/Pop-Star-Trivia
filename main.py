@@ -17,7 +17,7 @@ trivia.welcome() #calling welcome screen function
 
 trivia.t2.onclick(click_instruction) #registering button function
 
-# trivia.t2.onclick(click_trivia)
+trivia.t4.onclick(click_trivia)
 
 #setting up pandas
 
