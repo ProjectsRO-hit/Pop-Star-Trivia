@@ -22,42 +22,46 @@
 
 import turtle
 
-def n2():
-    t2.hideturtle()
-    screen1.addshape("./trivias/3.gif")
-    t1.shape("./trivias/3.gif")
-    t1.showturtle()
-    screen1.update()
+# import pandas
 
-# Create one screen for the game
-screen1 = turtle.Screen()
-screen1.setup(width=1.0, height=1.0)    
-screen1.title("Trivia Game")
-screen1.tracer(0)
-# Load shapes
-screen1.addshape("./trivias/1.gif")
-screen1.addshape("button.gif")
+# def n2():
+#     t2.hideturtle()
+#     screen1.addshape("./trivias/3.gif")
+#     t1.shape("./trivias/3.gif")
+#     t1.showturtle()
+#     screen1.update()
 
-# Create turtles
-t1 = turtle.Turtle()
-t1.shape("./trivias/1.gif")
-t1.penup()
+# # Create one screen for the game
+# screen1 = turtle.Screen()
+# screen1.setup(width=1.0, height=1.0)    
+# screen1.title("Trivia Game")
+# screen1.tracer(0)
+# # Load shapes
+# screen1.addshape("./trivias/1.gif")
+# screen1.addshape("button.gif")
+
+# # Create turtles
+# t1 = turtle.Turtle()
+# t1.shape("./trivias/1.gif")
+# t1.penup()
 
 
-t2 = turtle.Turtle()
-t2.shape("button.gif")
-t2.penup()
+# t2 = turtle.Turtle()
+# t2.shape("button.gif")
+# t2.penup()
 
-screen1.update()
+# screen1.update()
 
-# Function to handle button click
-def button_click(x, y):
-    print("Button clicked!")
-    # Call n2 function when clicking anywhere on the screen
-    n2()
+# # Function to handle button click
+# def button_click(x, y):
+#     print("Button clicked!")
+#     # Call n2 function when clicking anywhere on the screen
+#     n2()
 
-# Register click event on the entire screen to trigger n2
-t2.onclick(button_click)
+# # Register click event on the entire screen to trigger n2
+# t2.onclick(button_click)
 
-# Keep the window open
-screen1.mainloop()
+# # Keep the window open
+# screen1.mainloop()
+
+data_dict = {"Artist Names": ["Dua Lipa", "Billie Eilish", "Harry Styles", "Olivia Rodrigo",  "The Weeknd", "Post Malone", "Doja Cat", "Lizzo", "SZA", "Lil Nas X"], "Songs1":[]}
