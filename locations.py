@@ -63,5 +63,12 @@ import turtle
 
 # # Keep the window open
 # screen1.mainloop()
+import pandas as pd
 
-data_dict = {"Artist Names": ["Dua Lipa", "Billie Eilish", "Harry Styles", "Olivia Rodrigo",  "The Weeknd", "Post Malone", "Doja Cat", "Lizzo", "SZA", "Lil Nas X"], "Songs1":[]}
+data_dict = {"Artist Names": ["Dua Lipa", "Billie Eilish", "Harry Styles", "Olivia Rodrigo",  "The Weeknd", "Post Malone", "Doja Cat", "Lizzo", "SZA", "Lil Nas X"], 
+             "Songs1":["Levitating", "Bad Guy", "As It Was", "Drivers License", "Blinding Lights", "Circles", "Say So", "Truth Hurts", "Kill Bill", "Old Town Road"],
+             "Songs2": ["Don't Start Now", "Therefore I Am", "Adore You", "Good 4 U", "Can't Feel My Face", "Rockstar","Streets", "Good as Hell", "The Weekend", "Montero"], 
+             "Songs3": ["New Rules", "When The Party's Over", "Watermelon Sugar",  "Deja Vu", "Starboy", "Sunflower", "Woman","About Damn Time","Good Days", "Industry Baby"]}
+
+df = pd.DataFrame(data_dict)
+df.to_csv("Artist_name.csv")
